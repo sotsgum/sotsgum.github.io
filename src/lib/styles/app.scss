@@ -1,0 +1,29 @@
+@use '' as *;
+
+:root {
+	@include with-color-scheme using ($color-scheme) {
+		@each $var-name, $var-map in $theme {
+			--#{$var-name}: #{map-get($var-map, $color-scheme)};
+		}
+	}
+}
+
+body {
+	display: flex;
+	flex-direction: column;
+	min-height: 100vh;
+	@include var('color', 'primary-0');
+	@include var('background', 'background');
+	font-family: 'Comic Neue', cursive;
+}
+
+a {
+	@include var('color', 'primary-0');
+	text-decoration: none;
+}
+
+button {
+	padding: 0;
+	background-color: inherit;
+	border: none;
+}

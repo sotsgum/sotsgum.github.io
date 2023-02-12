@@ -1,0 +1,40 @@
+@use './variables' as *;
+
+@mixin dark-mode {
+	@media only screen and (prefers-color-scheme: dark) {
+		@content;
+	}
+}
+
+@mixin desktop {
+	@media only screen and (min-width: 768px) {
+		@content;
+	}
+}
+
+@mixin with-color-scheme {
+	@content (light);
+	@if not $DISABLE-DARK-MODE {
+		@include dark-mode {
+			@content (dark);
+		}
+	}
+}
+
+@mixin var($property, $var-name) {
+	@include with-color-scheme using ($color-scheme) {
+		#{$property}: map-get(map-get($theme, $var-name), $color-scheme);
+		#{$property}: var(--#{$var-name});
+	}
+}
+
+@mixin svg-rects($rect-lists...) {
+	@for $i from 1 through length($rect-lists) {
+		$rect-list: nth($rect-lists, $i);
+		.svg__rect_#{$i} {
+			transform: rotate(nth($rect-list, 2))
+				scale(nth($rect-list, 3))
+				translateY(nth($rect-list, 1));
+		}
+	}
+}

@@ -1,0 +1,28 @@
+$DISABLE-DARK-MODE: true;
+
+$theme: (
+	primary-0: (
+		light: hsl(0, 0%, 0%),
+		dark: hsl(0, 0%, 100%)
+	),
+	secondary-0: (
+		light: hsl(42, 99%, 54%),
+		dark: hsl(42, 99%, 54%)
+	),
+	background-0: (
+		light: hsl(0, 0%, 100%),
+		dark: hsl(0, 0%, 0%)
+	),
+	background-100: (
+		light: hsl(0, 0%, 90%),
+		dark: hsl(0, 0%, 15%)
+	),
+	background-200: (
+		light: hsl(0, 0%, 80%),
+		dark: hsl(0, 0%, 20%)
+	),
+	background: (
+		light: linear-gradient(to bottom, hsl(0, 0%, 100%), hsl(0, 0%, 90%)),
+		dark: linear-gradient(to bottom, hsl(0, 0%, 7.5%), hsl(0, 0%, 10%))
+	)
+);
