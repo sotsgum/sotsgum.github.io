@@ -1,8 +1,7 @@
 <script lang="ts">
 	import { pathname } from '$lib/stores';
-	import type { HeaderLink } from '$lib/types';
-	export let headerLink: HeaderLink;
-	let { href, name } = headerLink;
+	export let headerLink: [string, string];
+	let [href, name] = headerLink;
 </script>
 
 <a class="link" {href} aria-current={$pathname === href ? 'page' : null}>
