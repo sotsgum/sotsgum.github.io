@@ -13,4 +13,3 @@
 
 <Header />
 <slot />
-<h1>test</h1>
