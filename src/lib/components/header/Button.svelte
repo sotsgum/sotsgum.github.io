@@ -36,7 +36,6 @@
 		}
 	}
 	.svg {
-		@include svg-rects((0px, 1deg, 0.95), (0px, -2deg, 0.95), (0px, 1.5deg, 0.95));
 		width: min(2.5em, 10vw);
 		transition: transform 0.1s ease-out;
 		&__rect {
