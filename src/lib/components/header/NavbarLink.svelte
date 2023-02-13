@@ -28,6 +28,7 @@
 				width: 0em;
 				height: 0.25em;
 				@include var('background-color', 'secondary-0');
+				border-radius: 0.25em;
 				transition: all 0.1s ease-out;
 				z-index: -1;
 			}
