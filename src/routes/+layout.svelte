@@ -4,9 +4,6 @@
 </script>
 
 <svelte:head>
-	<link rel="preconnect" href="https://fonts.googleapis.com" />
-	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous" />
-	<link href="https://fonts.googleapis.com/css2?family=Comic+Neue&display=swap" rel="stylesheet" />
 	<link
 		rel="stylesheet"
 		type="text/css"
@@ -16,3 +13,4 @@
 
 <Header />
 <slot />
+<h1>test</h1>

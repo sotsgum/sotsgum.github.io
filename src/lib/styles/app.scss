@@ -1,5 +1,21 @@
 @use '' as *;
 
+@font-face {
+	font-family: 'comic_sans_ms';
+	src: url('/fonts/comic_sans_ms_bold-webfont.woff2') format('woff2'),
+		url('/fonts/comic_sans_ms_bold-webfont.woff') format('woff');
+	font-weight: bold;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'comic_sans_ms';
+	src: url('/fonts/comic_sans_ms-webfont.woff2') format('woff2'),
+		url('/fonts/comic_sans_ms-webfont.woff') format('woff');
+	font-weight: normal;
+	font-style: normal;
+}
+
 :root {
 	@include with-color-scheme using ($color-scheme) {
 		@each $var-name, $var-map in $theme {
@@ -14,7 +30,8 @@ body {
 	min-height: 100vh;
 	@include var('color', 'primary-0');
 	@include var('background', 'background');
-	font-family: 'Comic Neue', cursive;
+	font-family: 'Comic Sans MS', 'Comic Sans', 'Chalkboard SE', 'Comic Neue', 'comic_sans_ms',
+		sans-serif;
 }
 
 a {
