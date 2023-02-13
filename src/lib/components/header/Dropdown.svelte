@@ -5,7 +5,7 @@
 </script>
 
 <nav class="dropdown" aria-expanded={show}>
-	{#each headerLinks as { href, name }}
+	{#each Object.entries(headerLinks) as [href, name]}
 		<a class="dropdown__link" {href} aria-current={$pathname === href ? 'page' : null}>
 			<span>{name}</span>
 		</a>

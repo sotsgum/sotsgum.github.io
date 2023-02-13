@@ -1,3 +1,5 @@
-import type { HeaderLink } from '$lib/types';
-
-export const headerLinks: HeaderLink[] = [];
+export const headerLinks: Record<string, string> = {
+	'/white-sites': 'Белые сайты',
+	'/stop-bullying': 'Стоп-буллинг',
+	'/test': 'Тест'
+};

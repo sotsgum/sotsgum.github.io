@@ -4,7 +4,7 @@
 </script>
 
 <nav class="navbar">
-	{#each headerLinks as headerLink}
+	{#each Object.entries(headerLinks) as headerLink}
 		<NavbarLink {headerLink} />
 	{/each}
 </nav>
