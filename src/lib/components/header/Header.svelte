@@ -7,8 +7,8 @@
 <header class="header">
 	<a class="logo" href="/">
 		<div class="icon">
-			<img class="icon__thumb" src="logo_thumb.png" alt="сотсгум))" />
-			<img class="icon__face" src="logo_face.png" alt="сотсгум))" />
+			<img class="icon__thumb" src="/logo_thumb.png" alt="сотсгум))" />
+			<img class="icon__face" src="/logo_face.png" alt="сотсгум))" />
 		</div>
 		<span class="logo__span">сотсгум))</span>
 	</a>
