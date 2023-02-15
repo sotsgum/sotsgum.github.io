@@ -12,6 +12,12 @@
 	}
 }
 
+@mixin mobile {
+	@media only screen and (max-width: 767px) {
+		@content;
+	}
+}
+
 @mixin with-color-scheme {
 	@content (light);
 	@if not $DISABLE-DARK-MODE {
@@ -25,6 +31,13 @@
 	@include with-color-scheme using ($color-scheme) {
 		#{$property}: map-get(map-get($theme, $var-name), $color-scheme);
 		#{$property}: var(--#{$var-name});
+	}
+}
+
+@mixin var-important($property, $var-name) {
+	@include with-color-scheme using ($color-scheme) {
+		#{$property}: map-get(map-get($theme, $var-name), $color-scheme) !important;
+		#{$property}: var(--#{$var-name}) !important;
 	}
 }
 
