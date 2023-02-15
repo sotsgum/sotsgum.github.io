@@ -1,10 +1,14 @@
 <script lang="ts">
 	import { pathname } from '$lib/stores';
-	export let headerLink: [string, string];
-	let [href, name] = headerLink;
+	export let headerLink: [string, string | string[]];
+	let [name, href] = headerLink;
 </script>
 
-<a class="link" {href} aria-current={$pathname === href ? 'page' : null}>
+<a
+	class="link"
+	href={typeof href === 'string' ? href : href[0]}
+	aria-current={href.includes($pathname) ? 'page' : null}
+>
 	<span class="link__span">{name}</span>
 </a>
 

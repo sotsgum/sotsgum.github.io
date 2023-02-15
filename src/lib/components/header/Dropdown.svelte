@@ -5,8 +5,12 @@
 </script>
 
 <nav class="dropdown" aria-expanded={show}>
-	{#each Object.entries(headerLinks) as [href, name]}
-		<a class="dropdown__link" {href} aria-current={$pathname === href ? 'page' : null}>
+	{#each Object.entries(headerLinks) as [name, href]}
+		<a
+			class="dropdown__link"
+			href={typeof href === 'string' ? href : href[0]}
+			aria-current={href.includes($pathname) ? 'page' : null}
+		>
 			<span>{name}</span>
 		</a>
 	{/each}
