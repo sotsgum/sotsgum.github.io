@@ -1,3 +1,7 @@
+<svelte:head>
+	<title>Стоп-буллинг</title>
+</svelte:head>
+
 <main class="main">
 	<div class="text">
 		<h1 class="heading">Кнопка "Стоп&#8209;буллинг"</h1>
