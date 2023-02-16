@@ -102,6 +102,10 @@
 			font-size: min(1em, 5vw) !important;
 		}
 
+		.gs-spelling * {
+			color: inherit !important;
+		}
+
 		.gsc-webResult.gsc-result {
 			padding: min(1.25em, 5vw) min(0.5em, 2vw) !important;
 			background: none !important;
