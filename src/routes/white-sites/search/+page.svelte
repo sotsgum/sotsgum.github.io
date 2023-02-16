@@ -4,7 +4,7 @@
 	import { page } from '$app/stores';
 	import SearchBar from '$components/white-sites/SearchBar.svelte';
 
-	$: query = $page.url.searchParams.get('q');
+	$: query = $page.url.toString().split('?q=')[1];
 	$: value = query;
 
 	onMount(() => {
