@@ -6,13 +6,19 @@
 
 <nav class="dropdown" aria-expanded={show}>
 	{#each Object.entries(headerLinks) as [name, href]}
-		<a
-			class="dropdown__link"
-			href={typeof href === 'string' ? href : href[0]}
-			aria-current={href.includes($pathname) ? 'page' : null}
-		>
-			<span>{name}</span>
-		</a>
+		{#if typeof href === 'string'}
+			<a class="dropdown__link" {href} aria-current={href === $pathname ? 'page' : null}>
+				<span>{name}</span>
+			</a>
+		{:else}
+			<a
+				class="dropdown__link"
+				href={href[0]}
+				aria-current={href.includes($pathname) ? 'page' : null}
+			>
+				<span>{name}</span>
+			</a>
+		{/if}
 	{/each}
 </nav>
 
