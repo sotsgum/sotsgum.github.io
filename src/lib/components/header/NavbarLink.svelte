@@ -4,13 +4,15 @@
 	let [name, href] = headerLink;
 </script>
 
-<a
-	class="link"
-	href={typeof href === 'string' ? href : href[0]}
-	aria-current={href.includes($pathname) ? 'page' : null}
->
-	<span class="link__span">{name}</span>
-</a>
+{#if typeof href === 'string'}
+	<a class="link" {href} aria-current={href === $pathname ? 'page' : null}>
+		<span class="link__span">{name}</span>
+	</a>
+{:else}
+	<a class="link" href={href[0]} aria-current={href.includes($pathname) ? 'page' : null}>
+		<span class="link__span">{name}</span>
+	</a>
+{/if}
 
 <style lang="scss">
 	.link {
