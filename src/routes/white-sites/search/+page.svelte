@@ -28,6 +28,16 @@
 
 <svelte:head>
 	<title>{`${query && `${query} - `}Белые сайты`}</title>
+	<title>Белые сайты</title>
+	<meta property="og:title" content="Белые сайты" />
+	<meta
+		property="og:description"
+		content="Поиск по доверенным источникам, рекомендуемым настоящим профессионалом в сфере русского языка и литературы."
+	/>
+	<meta property="og:image" content="http://sotsgum.ru/banner.png" />
+	<meta property="og:image:width" content="1200" />
+	<meta property="og:image:height" content="627" />
+	<meta property="og:url" content="http://sotsgum.ru/white-sites" />
 </svelte:head>
 
 <main class="main">
