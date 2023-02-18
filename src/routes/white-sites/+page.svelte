@@ -1,5 +1,6 @@
 <script lang="ts">
 	import SearchBar from '$components/white-sites/SearchBar.svelte';
+	import { fade } from 'svelte/transition';
 </script>
 
 <svelte:head>
@@ -15,7 +16,7 @@
 	<meta property="og:url" content="http://sotsgum.ru/white-sites" />
 </svelte:head>
 
-<main class="main">
+<main in:fade={{ duration: 100 }} class="main">
 	<h1 class="heading">
 		Поиск по <span class="heading__white">белым</span> сайтам
 	</h1>

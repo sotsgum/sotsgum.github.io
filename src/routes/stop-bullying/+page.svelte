@@ -1,3 +1,7 @@
+<script lang="ts">
+	import { fade } from 'svelte/transition';
+</script>
+
 <svelte:head>
 	<title>Стоп-буллинг</title>
 	<title>Белые сайты</title>
@@ -12,7 +16,7 @@
 	<meta property="og:url" content="http://sotsgum.ru/stop-bullying" />
 </svelte:head>
 
-<main class="main">
+<main in:fade={{ duration: 100 }} class="main">
 	<div class="text">
 		<h1 class="heading">Кнопка "Стоп&#8209;буллинг"</h1>
 		<p class="description">
